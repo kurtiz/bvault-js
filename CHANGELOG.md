@@ -1,5 +1,11 @@
 # bvault-js
 
+## 0.1.1
+
+### Patch Changes
+
+- d7950c0: Update Package Info
+
 ## 0.1.0
 
 ### Minor Changes
