@@ -10,6 +10,8 @@
     "prepare": "npm run build",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
+    "local-release": "changeset version && changeset publish",
+    "prepublishOnly": "npm run ci",
     "test": "vitest",
     "test:run": "vitest run",
     "ci": "npm run build && npm run check-format && npm run test:run"
