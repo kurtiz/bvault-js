@@ -32,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kurtiz/brow-vault-js.git"
+    "url": "git+https://github.com/kurtiz/bvault-js.git"
   },
   "keywords": [
     "crypto",
@@ -49,7 +49,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kurtiz/brow-vault-js/issues"
+    "url": "https://github.com/kurtiz/bvault-js/issues"
   },
-  "homepage": "https://github.com/kurtiz/brow-vault-js#readme"
+  "homepage": "https://github.com/kurtiz/bvault-js#readme"
 }
