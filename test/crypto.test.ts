@@ -1,5 +1,10 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { decrypt, DecryptionError, encrypt, EncryptionError } from '../src/index.js';
+import {
+  decrypt,
+  DecryptionError,
+  encrypt,
+  EncryptionError,
+} from '../src/index.js';
 import {
   base64ToBuffer,
   bufferToBase64,
@@ -91,13 +96,12 @@ describe('Encryption Library', () => {
       // Create encrypted data and decrypt it
       const result = await withRealCrypto(async () => {
         const encrypted = await encrypt('test message', 'pass123');
-        const decrypted = await decrypt(
+        return await decrypt(
           encrypted.encryptedData,
           'pass123',
           encrypted.iv,
           encrypted.salt,
         );
-        return decrypted;
       });
 
       expect(result).toBe('test message');
