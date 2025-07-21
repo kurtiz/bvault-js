@@ -4,8 +4,12 @@ on:
   push:
     branches:
       - main
+
+# 👇 Important: allow workflow to push and create PRs
 permissions:
   contents: write
+  pull-requests: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -14,7 +18,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          # This makes Actions fetch all Git history so that Changesets can generate changelogs with the correct commits
+          # Fetch all history so Changesets can correctly generate changelogs
           fetch-depth: 0
 
       - name: Setup Node.js
@@ -33,7 +37,8 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          # This expects you to have a script called release which does a build for your packages and calls changeset publish
+          # This expects you to have a script called "local-release"
+          # which builds your packages and calls `changeset publish`
           publish: npm run local-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
