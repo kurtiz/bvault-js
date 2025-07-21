@@ -41,5 +41,5 @@ jobs:
           # which builds your packages and calls `changeset publish`
           publish: npm run local-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.P_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
