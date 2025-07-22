@@ -1,5 +1,11 @@
 # bvault-js
 
+## 0.1.2
+
+### Patch Changes
+
+- 64245e6: Add Docs
+
 ## 0.1.1
 
 ### Patch Changes
