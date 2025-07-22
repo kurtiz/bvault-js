@@ -1,5 +1,11 @@
 # bvault-js
 
+## 0.1.3-v0.1.2.0
+
+### Patch Changes
+
+- c4d29de: add comments to the codebase
+
 ## 0.1.2
 
 ### Patch Changes
