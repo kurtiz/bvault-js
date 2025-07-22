@@ -1,3 +1,7 @@
+/**
+ * Custom errors for encryption and decryption operations
+ * @module errors
+ */
 export class EncryptionError extends Error {
   constructor(message = 'Encryption failed') {
     super(message);
@@ -5,6 +9,10 @@ export class EncryptionError extends Error {
   }
 }
 
+/**
+ * Custom errors for encryption and decryption operations
+ * @module errors
+ */
 export class DecryptionError extends Error {
   constructor(message = 'Decryption failed') {
     super(message);
