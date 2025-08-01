@@ -1,5 +1,11 @@
 # bvault-js
 
+## 0.2.1
+
+### Patch Changes
+
+- ffe9155: clean debris
+
 ## 0.2.0
 
 ### Minor Changes
