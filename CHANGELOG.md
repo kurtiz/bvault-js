@@ -1,5 +1,16 @@
 # bvault-js
 
+## 0.2.0
+
+### Minor Changes
+
+- 3b2f46a: feat: Add secure storage with encryption and IndexedDB support
+
+### Patch Changes
+
+- dccc06e: feat: Initialize Rust-Wasm project with encryption library
+- 1f86554: fix: format
+
 ## 0.1.3
 
 ### Patch Changes
