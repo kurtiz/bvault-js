@@ -104,13 +104,7 @@ export const encrypt = async (
       salt: bufferToBase64(salt),
     };
   } catch (error) {
-    console.error(error);
-    // throw new EncryptionError();
-    return {
-      encryptedData: '',
-      iv: '',
-      salt: '',
-    };
+    throw new EncryptionError((error as Error).message);
   }
 };
 
@@ -140,7 +134,6 @@ export const decrypt = async (
 
     return bufferToString(decrypted);
   } catch (error) {
-    console.error(error);
-    throw new DecryptionError();
+    throw new DecryptionError((error as Error).message);
   }
 };

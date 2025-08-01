@@ -1,5 +1,9 @@
+// test/setup.ts
+
 // Polyfill for Web Crypto API in Node.js environment
 const { webcrypto } = eval('require')('crypto');
+// test/setup.ts  (append at the bottom)
+import 'fake-indexeddb/auto';
 
 // Set up global crypto for tests
 Object.defineProperty(global, 'crypto', {

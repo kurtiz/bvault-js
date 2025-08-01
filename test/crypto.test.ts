@@ -1,3 +1,5 @@
+// test/crypto.test.ts
+
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   decrypt,

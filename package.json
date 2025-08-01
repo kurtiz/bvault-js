@@ -21,6 +21,7 @@
   "devDependencies": {
     "@changesets/cli": "^2.29.5",
     "@types/node": "^24.0.15",
+    "fake-indexeddb": "^6.0.1",
     "jsdom": "^26.1.0",
     "prettier": "^3.6.2",
     "terser": "^5.43.1",
