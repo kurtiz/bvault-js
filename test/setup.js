@@ -2,25 +2,25 @@
 const { webcrypto } = eval('require')('crypto');
 // Set up global crypto for tests
 Object.defineProperty(global, 'crypto', {
-    value: webcrypto,
-    writable: true,
+  value: webcrypto,
+  writable: true,
 });
 // Set up text encoding/decoding globals
 Object.defineProperty(global, 'TextEncoder', {
-    value: TextEncoder,
-    writable: true,
+  value: TextEncoder,
+  writable: true,
 });
 Object.defineProperty(global, 'TextDecoder', {
-    value: TextDecoder,
-    writable: true,
+  value: TextDecoder,
+  writable: true,
 });
 // Mock functions for browser APIs
 Object.defineProperty(global, 'atob', {
-    value: (str) => Buffer.from(str, 'base64').toString('binary'),
-    writable: true,
+  value: (str) => Buffer.from(str, 'base64').toString('binary'),
+  writable: true,
 });
 Object.defineProperty(global, 'btoa', {
-    value: (str) => Buffer.from(str, 'binary').toString('base64'),
-    writable: true,
+  value: (str) => Buffer.from(str, 'binary').toString('base64'),
+  writable: true,
 });
 export {};
