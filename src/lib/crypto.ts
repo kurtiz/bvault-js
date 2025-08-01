@@ -1,3 +1,5 @@
+// src/lib/crypto.ts
+
 import {
   stringToBuffer,
   bufferToString,
@@ -102,7 +104,13 @@ export const encrypt = async (
       salt: bufferToBase64(salt),
     };
   } catch (error) {
-    throw new EncryptionError();
+    console.error(error);
+    // throw new EncryptionError();
+    return {
+      encryptedData: '',
+      iv: '',
+      salt: '',
+    };
   }
 };
 
@@ -132,6 +140,7 @@ export const decrypt = async (
 
     return bufferToString(decrypted);
   } catch (error) {
+    console.error(error);
     throw new DecryptionError();
   }
 };

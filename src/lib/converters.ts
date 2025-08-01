@@ -1,3 +1,5 @@
+// src/lib/converters.ts
+
 // Text <-> ArrayBuffer conversion
 /**
  * Converts a string to an ArrayBuffer

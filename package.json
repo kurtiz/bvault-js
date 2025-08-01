@@ -6,6 +6,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "build:wasm": "wasm-pack build bvault_js_rs --target bundler --out-dir ../src/pkg",
+    "build:now": "npm run build:wasm && tsc && cp -r src/pkg dist/pkg",
     "build": "tsc",
     "prepare": "npm run build",
     "format": "prettier --write .",
@@ -21,15 +23,14 @@
     "@types/node": "^24.0.15",
     "jsdom": "^26.1.0",
     "prettier": "^3.6.2",
+    "terser": "^5.43.1",
     "typescript": "^5.8.3",
     "vitest": "^3.2.4"
   },
   "files": [
-    "dist"
+    "dist",
+    "dist/pkg"
   ],
-  "browser": {
-    "crypto": false
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kurtiz/bvault-js.git"
